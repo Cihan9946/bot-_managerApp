@@ -1,0 +1,165 @@
+from django.urls import path
+
+from ...conf import settings
+
+from ..views.edit import (
+    edit_private_thread,
+    edit_private_thread_post,
+    edit_thread,
+    edit_thread_post,
+)
+from ..views.list import category_threads, private_threads, threads
+from ..views.redirect import (
+    PostRedirectView,
+    PrivateThreadLastPostRedirectView,
+    PrivateThreadUnapprovedPostRedirectView,
+    PrivateThreadUnreadPostRedirectView,
+    ThreadLastPostRedirectView,
+    ThreadSolutionRedirectView,
+    ThreadUnapprovedPostRedirectView,
+    ThreadUnreadPostRedirectView,
+)
+from ..views.replies import private_thread_replies, thread_replies
+from ..views.reply import reply_private_thread, reply_thread
+from ..views.selectcategory import SelectCategoryView
+from ..views.start import start_private_thread, start_thread
+
+
+urlpatterns = [
+    path(
+        "start-thread/",
+        SelectCategoryView.as_view(),
+        name="start-thread",
+    ),
+    path(
+        "c/<slug:slug>/<int:id>/start-thread/",
+        start_thread,
+        name="start-thread",
+    ),
+    path(
+        "private/start-thread/",
+        start_private_thread,
+        name="start-private-thread",
+    ),
+    path(
+        "threads/",
+        threads,
+        name="threads",
+        kwargs={"is_index": False},
+    ),
+    path(
+        "threads/<slug:filter>/",
+        threads,
+        name="threads",
+    ),
+    path(
+        "c/<slug:slug>/<int:id>/",
+        category_threads,
+        name="category",
+    ),
+    path(
+        "c/<slug:slug>/<int:id>/<slug:filter>/",
+        category_threads,
+        name="category",
+    ),
+    path(
+        "private/",
+        private_threads,
+        name="private-threads",
+    ),
+    path(
+        "private/<slug:filter>/",
+        private_threads,
+        name="private-threads",
+    ),
+    path(
+        "t/<slug:slug>/<int:id>/",
+        thread_replies,
+        name="thread",
+    ),
+    path(
+        "t/<slug:slug>/<int:id>/<int:page>/",
+        thread_replies,
+        name="thread",
+    ),
+    path(
+        "p/<slug:slug>/<int:id>/",
+        private_thread_replies,
+        name="private-thread",
+    ),
+    path(
+        "p/<slug:slug>/<int:id>/<int:page>/",
+        private_thread_replies,
+        name="private-thread",
+    ),
+    path(
+        "t/<slug:slug>/<int:id>/last/",
+        ThreadLastPostRedirectView.as_view(),
+        name="thread-last-post",
+    ),
+    path(
+        "t/<slug:slug>/<int:id>/unread/",
+        ThreadUnreadPostRedirectView.as_view(),
+        name="thread-unread-post",
+    ),
+    path(
+        "t/<slug:slug>/<int:id>/unapproved/",
+        ThreadUnapprovedPostRedirectView.as_view(),
+        name="thread-unapproved-post",
+    ),
+    path(
+        "t/<slug:slug>/<int:id>/solution/",
+        ThreadSolutionRedirectView.as_view(),
+        name="thread-solution-post",
+    ),
+    path(
+        "p/<slug:slug>/<int:id>/last/",
+        PrivateThreadLastPostRedirectView.as_view(),
+        name="private-thread-last-post",
+    ),
+    path(
+        "p/<slug:slug>/<int:id>/unread/",
+        PrivateThreadUnreadPostRedirectView.as_view(),
+        name="private-thread-unread-post",
+    ),
+    path(
+        "p/<slug:slug>/<int:id>/unapproved/",
+        PrivateThreadUnapprovedPostRedirectView.as_view(),
+        name="private-thread-unapproved-post",
+    ),
+    path(
+        "t/<slug:slug>/<int:id>/reply/",
+        reply_thread,
+        name="reply-thread",
+    ),
+    path(
+        "p/<slug:slug>/<int:id>/reply/",
+        reply_private_thread,
+        name="reply-private-thread",
+    ),
+    path(
+        "t/<slug:slug>/<int:id>/edit/",
+        edit_thread,
+        name="edit-thread",
+    ),
+    path(
+        "p/<slug:slug>/<int:id>/edit/",
+        edit_private_thread,
+        name="edit-private-thread",
+    ),
+    path(
+        "t/<slug:slug>/<int:id>/edit/<int:post>/",
+        edit_thread_post,
+        name="edit-thread",
+    ),
+    path(
+        "p/<slug:slug>/<int:id>/edit/<int:post>/",
+        edit_private_thread_post,
+        name="edit-private-thread",
+    ),
+    path(
+        "post/<int:id>/",
+        PostRedirectView.as_view(),
+        name="post",
+    ),
+]

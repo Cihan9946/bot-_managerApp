@@ -1,0 +1,22 @@
+vf-field-select,
+vf-field-select-multiple {
+  .vf-field__row {
+    min-height: 76px;
+  }
+
+  .mdc-select {
+    min-width: auto;
+  }
+
+  .mdc-select-helper-text {
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: -6px;
+    margin-bottom: 6px;
+    font-size: 10px;
+  }
+
+  .mdc-select--invalid:not(.mdc-select--disabled) + .mdc-select-helper-text {
+    color: var(--mdc-theme-error, #b00020);
+  }
+
+}

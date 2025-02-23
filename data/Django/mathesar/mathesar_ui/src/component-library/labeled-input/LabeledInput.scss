@@ -1,0 +1,75 @@
+.labeled-input {
+  --spacing-y-default: 0.25em;
+  --spacing-x-default: 0.4em;
+
+  .label {
+    display: inline-block;
+  }
+  .input {
+    display: block;
+
+    // TODO: Unify styling for all form elements
+    > button.dropdown.trigger {
+      display: flex;
+      width: 100%;
+    }
+  }
+
+  .label-content > .help {
+    display: block;
+    font-size: var(--text-size-small);
+    color: var(--color-text-muted);
+    margin-top: var(--spacing-y, var(--spacing-y-default));
+    &:empty {
+      display: none;
+    }
+  }
+
+  .description {
+    display: block;
+    font-size: var(--text-size-small);
+    color: var(--color-text-muted);
+    margin-top: var(--spacing-y, var(--spacing-y-default));
+    margin-left: 1.5rem;
+    &:empty {
+      display: none;
+    }
+  }
+
+  &.layout-stacked {
+    .input {
+      margin-top: var(--spacing-y, var(--spacing-y-default));
+    }
+  }
+
+  &.layout-inline .label-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    > .label {
+      flex: 0 0 auto;
+      margin-right: 0.5rem;
+      padding-top: calc(var(--input-padding-y, 0.5em));
+      padding-bottom: calc(var(--input-padding-y, 0.5em));
+    }
+    .field-help {
+      margin-top: 0.25em;
+    }
+  }
+
+  &.layout-inline-input-first .label-content {
+    display: grid;
+    grid-template: auto auto / auto 1fr;
+    > .input {
+      grid-area: 1 / 1 / 1 / 1;
+      margin-right: var(--spacing-x, var(--spacing-x-default));
+    }
+    > .label {
+      grid-area: 1 / 2 / 1 / 2;
+    }
+    > .help {
+      grid-area: 2 / 2 / 2 / 2;
+      margin-top: var(--spacing-y, var(--spacing-y-default));
+    }
+  }
+}

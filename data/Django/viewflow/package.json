@@ -1,0 +1,91 @@
+{
+  "name": "viewflow",
+  "scripts": {
+    "vite": "tsc && vite build",
+    "python-integration-tests": "DATABASE_URL=postgres://viewflow:viewflow@localhost/viewflow REDIS_CACHE_URL=redis://127.0.0.1:6379/1 tox",
+    "demo-server": "tox -q -- python manage.py runserver  --settings=demo.settings --nothreading",
+    "workflow101-celery": "tox  -q -- celery --app cookbook.workflow101.config worker --loglevel DEBUG",
+    "workflow101-server": "tox -q python -- cookbook/workflow101/manage.py runserver  --nothreading"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.23.10",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-react": "^7.23.3",
+    "@web/dev-server": "^0.4.6",
+    "babel-core": "^4.7.16",
+    "babel-preset-solid": "^1.8.12",
+    "classcat": "^5.0.4",
+    "eslint": "^8.56.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-react": "^7.33.2",
+    "js-cookie": "^3.0.5",
+    "sass": "^1.70.0",
+    "shepherd.js": "^11.2.0",
+    "solid-element": "^1.8.0",
+    "solid-js": "^1.8.14",
+    "throttle-debounce": "^5.0.0",
+    "vite": "^5.0.12",
+    "vite-plugin-solid": "^2.9.1",
+    "vite-plugin-static-copy": "^1.0.1"
+  },
+  "dependencies": {
+    "@hotwired/turbo": "^7.3.0",
+    "@iconfu/svg-inject": "^1.2.3",
+    "@material/textfield": "^14.0.0",
+    "@material/web": "^1.2.0",
+    "@open-wc/lit-helpers": "^0.6.0",
+    "material-components-web": "^14.0.0",
+    "material-icons": "^1.13.12",
+    "perfect-scrollbar": "^1.5.5",
+    "roboto-fontface": "^0.10.0",
+    "simple-icons-font": "^11.3.0",
+    "smartcrop": "^2.0.5",
+    "swagger-ui-dist": "^4.19.1",
+    "trix": "^2.0.10",
+    "vanilla-jsoneditor": "^0.23.8",
+    "vis-network": "^9.1.9"
+  },
+  "eslintConfig": {
+    "extends": "google",
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+      "classes": true,
+      "ecmaVersion": 12,
+      "sourceType": "module",
+      "requireConfigFile": false,
+      "babelOptions": {
+        "presets": [
+          "@babel/preset-react"
+        ]
+      }
+    },
+    "plugins": [
+      "babel",
+      "react",
+      "import"
+    ],
+    "settings": {
+      "import/parsers": {
+        "@typescript-eslint/parser": [
+          ".ts",
+          ".tsx"
+        ]
+      }
+    },
+    "rules": {
+      "react/jsx-uses-vars": 2,
+      "require-jsdoc": "off",
+      "max-len": [
+        "error",
+        120
+      ],
+      "no-undef": "error",
+      "no-invalid-this": 0,
+      "babel/no-invalid-this": 1
+    },
+    "env": {
+      "es6": true
+    }
+  }
+}
