@@ -1,6 +1,0 @@
-{
-    "INSTALLED_APPS": ["newapp"],
-    "PERSON": {"age": 17},
-    "FRUITS": ["banana", "grapes"],
-    "UNIQUE_FRUITS": ["banana", "grapes", "dynaconf_merge_unique"],
-}

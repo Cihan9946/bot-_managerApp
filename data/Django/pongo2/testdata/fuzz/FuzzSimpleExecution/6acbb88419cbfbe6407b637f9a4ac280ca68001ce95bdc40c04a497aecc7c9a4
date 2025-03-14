@@ -1,3 +1,0 @@
-go test fuzz v1
-string("{%macro A()%}{%if(0)%}{%endif%}0{{0}}0{{A}}0{%if 0%}{%endif%}0{%endmacro%}{%for A in A%}{%endfor%}")
-string("0")

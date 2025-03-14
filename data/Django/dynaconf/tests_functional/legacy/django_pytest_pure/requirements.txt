@@ -1,4 +1,0 @@
-Django
-dynaconf
-pytest
-pytest-django

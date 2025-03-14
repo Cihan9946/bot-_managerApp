@@ -1,5 +1,0 @@
-[development]
-VAR_DFT = "default_dev"
-
-[production]
-VAR_DFT = "default_prod"

@@ -1,6 +1,0 @@
-{
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base", "group:all"],
-  "enabledManagers": ["docker-compose"],
-  "recreateClosed": false
-}

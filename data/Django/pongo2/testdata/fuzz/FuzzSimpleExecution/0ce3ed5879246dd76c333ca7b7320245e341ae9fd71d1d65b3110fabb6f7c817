@@ -1,3 +1,0 @@
-go test fuzz v1
-string("{{simple.func_add_iface(0,A)}}")
-string("0")

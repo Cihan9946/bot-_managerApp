@@ -1,6 +1,0 @@
-query OperationName {
-  optionalListOfPeople {
-    name
-    age
-  }
-}

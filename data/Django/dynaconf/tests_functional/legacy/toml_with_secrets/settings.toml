@@ -1,7 +1,0 @@
-[example]
-server = 'foo.com'
-username = 'admin'
-password = false
-
-[development]
-username = 'foo'

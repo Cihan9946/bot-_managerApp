@@ -1,1 +1,0 @@
-.. include:: ../BACKERS.rst

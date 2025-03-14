@@ -1,1 +1,0 @@
-{% block content %}<p>base4 content</p>{% endblock %}

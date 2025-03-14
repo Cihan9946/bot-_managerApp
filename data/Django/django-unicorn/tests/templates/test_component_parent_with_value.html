@@ -1,8 +1,0 @@
-{% load unicorn %}
-
-<div>
-  --parent--
-  {% unicorn 'tests.views.message.test_hash.FakeComponentChild' parent=view %}
-
-  ||value:{{ value }}||
-</div>

@@ -1,3 +1,0 @@
-MERGING: ["@jinja {{ this.SUBDIR }}"]
-SUBDIR: "@jinja {{ this.ROOT }}/yaml"
-ROOT: "../.."

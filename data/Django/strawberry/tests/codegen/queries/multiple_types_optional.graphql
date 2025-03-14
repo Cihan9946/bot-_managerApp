@@ -1,5 +1,0 @@
-query OperationName {
-  optionalPerson {
-    name
-  }
-}

@@ -1,2 +1,0 @@
-flask>=0.12
-dynaconf>=0.6.0

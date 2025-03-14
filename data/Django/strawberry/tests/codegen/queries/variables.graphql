@@ -1,3 +1,0 @@
-query OperationName($id: ID, $input: ExampleInput!, $ids: [ID!]!, $ids2: [ID], $ids3: [[ID]]) {
-  withInputs(id: $id, input: $input)
-}

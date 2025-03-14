@@ -1,4 +1,0 @@
-[development]
-VAR1 = 'var1_dev'
-[production]
-VAR1 = 'var1_prod'

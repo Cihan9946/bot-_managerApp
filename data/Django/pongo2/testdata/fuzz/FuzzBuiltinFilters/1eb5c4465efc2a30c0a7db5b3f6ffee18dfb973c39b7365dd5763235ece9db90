@@ -1,3 +1,0 @@
-go test fuzz v1
-string("\" \x9ea\xe3\xbd\xd0a a0\"")
-string("7")

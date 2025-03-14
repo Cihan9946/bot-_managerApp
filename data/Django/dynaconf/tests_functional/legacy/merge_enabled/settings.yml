@@ -1,5 +1,0 @@
-default:
-  yml_var: 1
-  a_big_dict:
-    file:
-      settings.yml: true

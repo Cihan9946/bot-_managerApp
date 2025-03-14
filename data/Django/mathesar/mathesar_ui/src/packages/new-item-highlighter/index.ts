@@ -1,1 +1,0 @@
-export { highlightNewItems } from './highlightNewItems';

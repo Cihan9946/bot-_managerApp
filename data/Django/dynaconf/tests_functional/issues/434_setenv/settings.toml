@@ -1,5 +1,0 @@
-[default]
-DB_NAME = "mydb.db"
-
-[development]
-DB_PATH = "@format {env[HOME]}/{this.current_env}/{this.DB_NAME}"

@@ -1,3 +1,0 @@
-flask>=1.0
-dynaconf>=0.5.3
-PyYAML

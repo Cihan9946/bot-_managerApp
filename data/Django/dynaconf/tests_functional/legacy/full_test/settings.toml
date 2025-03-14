@@ -1,4 +1,0 @@
-[default]
-tomlvar='come from toml'
-[staging]
-tomlvar='come from toml staging'

@@ -1,8 +1,0 @@
-query OperationName {
-  union {
-    ... on Animal {
-      age
-      name
-    }
-  }
-}

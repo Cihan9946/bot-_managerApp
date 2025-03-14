@@ -1,5 +1,0 @@
-default:
-  plugin2_var: true
-  lastfile: configs/plugin2.yaml
-  mergeable:
-    plugin2: true

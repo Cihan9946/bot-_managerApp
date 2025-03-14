@@ -1,4 +1,0 @@
----
-dynaconf_dotted_lookup: false
-default:
-    www.google.com: data

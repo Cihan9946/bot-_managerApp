@@ -1,2 +1,0 @@
--r common.pip
-Django==4.2.6

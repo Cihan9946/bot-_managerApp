@@ -1,4 +1,0 @@
----
-- name: A task included from the ignored_files.yaml playbook
-  debug:
-    msg: hello world

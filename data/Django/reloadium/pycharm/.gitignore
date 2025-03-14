@@ -1,9 +1,0 @@
-build
-build_cpy
-.gradle
-reloadium-*.zip
-video
-common
-src/main/resources/META-INF/wheels/*
-.DS_Store
-**/temp:/
