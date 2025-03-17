@@ -76,6 +76,7 @@ Contributions are welcome! Please follow these steps:
    git push origin feature/YourFeatureName
    ```
 5. Open a pull request.
+   
 
 ---
 Thank you for contributing to Task Manager Bot!
